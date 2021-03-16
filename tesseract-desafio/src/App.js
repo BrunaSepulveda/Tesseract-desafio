@@ -1,10 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {ProfileProvider} from './context/ProfileContext'
+import { Route, Switch } from 'react-router-dom';
+import ProfileList from './pages/ProfileList'
 
 function App() {
   return (
-    <div>
-    </div>
+    <ProfileProvider>
+      <Switch>
+        <Route exact path="/" component={ ProfileList } />
+      </Switch>
+    </ProfileProvider>
   );
 }
 
