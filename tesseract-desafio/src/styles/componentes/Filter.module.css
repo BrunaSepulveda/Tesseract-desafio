@@ -10,4 +10,8 @@
 .filterContainer input {
   width: 60%;
   text-align: center;
+  border-radius: calc(0.5 * 3rem);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  height: 3rem;
+  border: none;
 }
