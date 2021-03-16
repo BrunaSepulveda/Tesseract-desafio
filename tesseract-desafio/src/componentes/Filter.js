@@ -13,3 +13,5 @@ const Filter = () => {
     </header>
   );
 };
+
+export default Filter;

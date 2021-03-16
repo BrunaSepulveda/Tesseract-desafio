@@ -5,6 +5,7 @@ export const ProfileContext = createContext();
 
 export const ProfileProvider = ({ children }) => {
   const [data, setData] = useState([]);
+  const [filterByLogin, setFilterByLogin] = useState("")
 
   const fetchdata = async () => {
     const results = await getMembers()
@@ -16,11 +17,13 @@ export const ProfileProvider = ({ children }) => {
   }, []);
 
   const handleInput = ({ target }) => {
-      //  name: target.value
+      setFilterByLogin(target.value)
   };
 
   const context = {
-    data
+    data,
+    filterByLogin,
+    handleInput
   };
 
   return (
