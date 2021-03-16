@@ -1,0 +1,13 @@
+.filterContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+
+  padding: 1rem;
+}
+
+.filterContainer input {
+  width: 60%;
+  text-align: center;
+}

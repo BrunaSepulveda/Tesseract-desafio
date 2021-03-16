@@ -1,8 +1,7 @@
 import React, { useContext } from 'react';
 import { ProfileContext } from '../context/ProfileContext';
-import Profile from '../componentes/Profile';
-import Filter from '../componentes/Filter'
-import styles from '../styles/pages/ProfileList.module.css';
+import Profile from './Profile';
+import styles from '../styles/componentes/ProfileList.module.css';
 
 
 const ProfileList = () => {
@@ -16,13 +15,10 @@ const ProfileList = () => {
   const filteredList =  filterByInput(filterByLogin);
 
   return(
-    <div>
-      <Filter/>
     <div className={ styles.profileListContainer }>
-      { filteredList.map((item) => 
-          <Profile login={item.login} avatar_url={item.avatar_url} />) 
-      }
-    </div>
+        { filteredList.map((item) => 
+            <Profile login={item.login} avatar_url={item.avatar_url} />) 
+        }
     </div>
   );
 };
