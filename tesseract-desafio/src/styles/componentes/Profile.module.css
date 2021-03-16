@@ -1,18 +1,30 @@
 .profileContainer {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   margin: 1rem;
-
+  width: 10rem;
+  height: 15rem;
+  flex-wrap: inherit;
+  transition: background-color 0.2s;
+  border-radius: 10%;
 }
 
 .profileContainer > img {
   width: 5.5rem;
   height: 5.5rem;
   border-radius: 50%;
+  margin-bottom:  0.5rem;
 }
 
 .profileContainer div strong {
   font-size: 1.5rem;
   font-weight: 600;
+}
+
+.profileContainer:hover {
+  background-color: rgb(236, 236, 236);
+  border-radius: 10%;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
 }

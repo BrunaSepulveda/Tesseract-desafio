@@ -1,0 +1,14 @@
+.homeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  justify-content: center;
+  flex-direction: column;
+
+  padding: 1rem;
+}
+
+.homeContainer a {
+  text-decoration: none;
+  color: black;
+}

@@ -12,26 +12,28 @@ const ProfileDetails = ({ match }) =>{
     data_inicio: 0 
   })
 
-  const fetchUSer = async () => {
+  const fetchUser = async () => {
     const userInfor = await getOneProfile(login);
     setUserData({...userInfor})
     console.log({userInfor})
   };
 
   useEffect(() => {
-    fetchUSer();
+    fetchUser();
   }, [])
   
   const {nome, qt_repositorios, qt_seguidores, data_inicio } = userData;
 
   return(
-    <div className={ styles.profileDetailsContainer }>
-      <strong>{nome}</strong>
-      <p>
-        {nome} possui {qt_repositorios} repositórios públicos,
-        mantém { qt_seguidores} seguidores e criou sua conta no Github na data {data_inicio}. 
-      </p>
-      <Link to="/"> Voltar </Link>
+    <div className={ styles.levelModalOverlay} >
+      <div className={ styles.profileDetailsContainer }>
+        <strong>{nome}</strong>
+        <p>
+          {nome} possui {qt_repositorios} repositórios públicos,
+          mantém { qt_seguidores} seguidores e criou sua conta no Github na data {data_inicio}. 
+        </p>
+        <Link to="/"> Voltar </Link>
+      </div>
     </div>
   );
 };
