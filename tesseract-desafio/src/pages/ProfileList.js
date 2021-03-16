@@ -10,7 +10,9 @@ const ProfileList = () => {
  // const profileList = filterByTag(name)
   return(
     <div className={ styles.profileListContainer }>
-      { data.map((item) => <Profile login={item.login} avatar_url={item.avatar_url} />) }
+      { data.map((item) => 
+          <Profile login={item.login} avatar_url={item.avatar_url} />) 
+      }
     </div>
   );
 };
