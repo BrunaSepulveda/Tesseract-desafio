@@ -14,8 +14,7 @@
 
 .profileDetailsContainer {
   position: relative;
-  width: 520px;
-  height: 350px;
+  max-width: 520px;
   background:rgb(240, 145, 111);
   box-shadow: 5px 5px 15px rgba(255, 0, 0, 0.5);
   border-radius: 10px;

@@ -6,7 +6,7 @@ const Profile = ({ login, avatar_url }) => {
     return(
       <Link to={ `/detalhes/${login}` }> 
         <div className={ styles.profileContainer }>
-          <img src={avatar_url} alt="Foto usuário"/>
+          <img src={avatar_url} alt={`Foto de ${ login }`}/>
           <div>
             <strong> {login} </strong>
           </div>
