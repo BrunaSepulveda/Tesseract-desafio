@@ -8,7 +8,8 @@ const ProfileList = () => {
  const { data, filterByLogin } = useContext( ProfileContext);
 
  const filterByInput = ( login ) => {
-    const listProfile = data.filter((item) =>  item.login.toUpperCase().includes(login.toUpperCase()));
+    const listProfile = data.filter((item) =>  (
+      item.login.toUpperCase().includes(login.toUpperCase())));
     return listProfile;
   }
 
@@ -16,12 +17,11 @@ const ProfileList = () => {
 
   return(
     <div className={ styles.profileListContainer }>
-        { filteredList.map((item) => 
-            <Profile login={item.login} avatar_url={item.avatar_url} />) 
+        { filteredList.map((item, index) => 
+          <Profile key={index} login={item.login} avatar_url={item.avatar_url} />) 
         }
     </div>
   );
 };
 
 export default ProfileList;
-//

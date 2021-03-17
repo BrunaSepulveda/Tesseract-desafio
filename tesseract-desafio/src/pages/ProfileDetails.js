@@ -15,7 +15,6 @@ const ProfileDetails = ({ match }) =>{
   const fetchUser = async () => {
     const userInfor = await getOneProfile(login);
     setUserData({...userInfor})
-    console.log({userInfor})
   };
 
   useEffect(() => {
@@ -23,6 +22,8 @@ const ProfileDetails = ({ match }) =>{
   }, [])
   
   const {nome, qt_repositorios, qt_seguidores, data_inicio } = userData;
+  const meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho","Agosto","Setembro","Outubro","Novembro","Dezemro"];
+  const data = new Date(data_inicio)
 
   return(
     <div className={ styles.levelModalOverlay} >
@@ -30,7 +31,8 @@ const ProfileDetails = ({ match }) =>{
         <strong>{nome}</strong>
         <p>
           {nome} possui {qt_repositorios} repositórios públicos,
-          mantém { qt_seguidores} seguidores e criou sua conta no Github na data {data_inicio}. 
+          mantém { qt_seguidores} seguidores e criou sua conta no Github no dia { data.getDate() } do
+          mês de { meses[(data.getMonth())] } do ano { data.getFullYear() }. 
         </p>
         <Link to="/"> Voltar </Link>
       </div>
