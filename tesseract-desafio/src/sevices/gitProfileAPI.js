@@ -17,9 +17,12 @@ export const getOneProfile = async ( user ) => {
     const response = await fetch(endpoint);
     const data = await response.json();
     const members = {
+      avatar_url: data.avatar_url,
       nome: data.name,
       qt_repositorios: data.public_repos,
+      qt_segue: data.following,
       qt_seguidores: data.followers,
+      location: data.location,
       data_inicio: data.created_at 
     };
     return members;

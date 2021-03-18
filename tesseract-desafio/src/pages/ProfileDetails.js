@@ -6,9 +6,12 @@ import styles from '../styles/pages/ProfileDetails.module.css'
 const ProfileDetails = ({ match }) =>{
   const { login } = match.params;
   const[ userData, setUserData ] = useState({
+    avatar_url: "",
     nome: "",
     qt_repositorios: 0,
+    qt_segue: 0,
     qt_seguidores: 0,
+    location:"",
     data_inicio: 0 
   })
 
@@ -21,18 +24,22 @@ const ProfileDetails = ({ match }) =>{
     fetchUser();
   }, [])
   
-  const {nome, qt_repositorios, qt_seguidores, data_inicio } = userData;
-  const meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho","Agosto","Setembro","Outubro","Novembro","Dezemro"];
+  const { avatar_url, nome, qt_repositorios, qt_segue, qt_seguidores, location, data_inicio } = userData;
+  const meses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul","Ago","Set","Out","Nov","Dez"];
   const data = new Date(data_inicio)
 
   return(
     <div className={ styles.levelModalOverlay} >
       <div className={ styles.profileDetailsContainer }>
-        <strong>{nome}</strong>
+        <img src={avatar_url} alt={`Foto de ${ login }`}/>
+        <strong>{login}</strong>
         <p>
-          {nome} possui {qt_repositorios} repositórios públicos,
-          mantém { qt_seguidores} seguidores e criou sua conta no Github no dia { data.getDate() } do
-          mês de { meses[(data.getMonth())] } do ano { data.getFullYear() }. 
+          <b>Nome:</b> {nome} <br/>
+          <b>Localização:</b> {!location ? "Não informado " : location} <br/>
+          <b>Número de repositórios públicos:</b> {qt_repositorios} <br/>
+          <b>Número de pessoas que segue:</b> { qt_segue } <br/>
+          <b>Número de seguidores:</b> { qt_seguidores} <br/>
+          <b>Data de início no Github:</b> { data.getDate() }/ { meses[(data.getMonth())] }/ { data.getFullYear() } <br/>
         </p>
         <Link to="/"> Voltar </Link>
       </div>

@@ -9,6 +9,7 @@
   flex-wrap: inherit;
   transition: background-color 0.2s;
   border-radius: 10%;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .profileContainer > img {

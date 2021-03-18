@@ -1,9 +1,9 @@
 import React from 'react';
-import {ProfileProvider} from './context/ProfileContext'
+import { ProfileProvider } from './context/ProfileContext';
 import { Route, Switch } from 'react-router-dom';
 import Home from './pages/Home';
-import ProfileDetails from './pages/ProfileDetails'
-import NotFound from './pages/NotFound'
+import ProfileDetails from './pages/ProfileDetails';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
