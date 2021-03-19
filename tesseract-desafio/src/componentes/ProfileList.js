@@ -18,7 +18,7 @@ const ProfileList = () => {
   return(
     <div className={ styles.profileListContainer }>
         { filteredList.map((item, index) => 
-          <Profile key={index} login={item.login} avatar_url={item.avatar_url} />) 
+          <Profile key={index} login={item.login} avatar_url={item.avatar_url} index={index}/>) 
         }
     </div>
   );

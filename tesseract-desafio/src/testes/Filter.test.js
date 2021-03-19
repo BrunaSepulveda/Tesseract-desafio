@@ -18,7 +18,7 @@ const providerProps = {
   handleInput,
 }
 
-describe('Teste da tela Filter', () => {
+describe('Teste do componente Filter', () => {
   it('Input inicia vazio',() => {
 
   const {getByTestId} = renderWithRouter(<Filter/>, providerProps);

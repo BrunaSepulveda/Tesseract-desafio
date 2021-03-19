@@ -3,7 +3,7 @@ import renderWithRouter from './renderWithRouter'
 import Profile from '../componentes/Profile';
 import data from './mockdata'
 
-describe('Teste da tela Profile', () => {
+describe('Teste do componente Profile', () => {
   it("Verifica que renderiza a imagem e o login correto",() => {
     const { getByTestId } = renderWithRouter(
       <Profile 
