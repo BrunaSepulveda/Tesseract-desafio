@@ -1,7 +1,7 @@
 import React from 'react';
-import renderWithRouter from './renderWithRouter'
+import renderWithRouter from './renderWithRouter';
 import Profile from '../componentes/Profile';
-import data from './mockdata'
+import { data } from './mockdata'
 
 describe('Teste do componente Profile', () => {
   it("Verifica que renderiza a imagem e o login correto",() => {
