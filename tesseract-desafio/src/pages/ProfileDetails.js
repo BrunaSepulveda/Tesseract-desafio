@@ -39,7 +39,7 @@ const ProfileDetails = ({ match }) =>{
           <b>Número de repositórios públicos:</b> {qt_repositorios} <br/>
           <b>Número de pessoas que segue:</b> { qt_segue } <br/>
           <b>Número de seguidores:</b> { qt_seguidores} <br/>
-          <b>Data de início no Github:</b> { data.getDate() }/ { meses[(data.getMonth())] }/ { data.getFullYear() } <br/>
+          <b>Data de ingresso no Github:</b> { data.getDate() }/ { meses[(data.getMonth())] }/ { data.getFullYear() } <br/>
         </p>
         <Link to="/"> Voltar </Link>
       </div>
