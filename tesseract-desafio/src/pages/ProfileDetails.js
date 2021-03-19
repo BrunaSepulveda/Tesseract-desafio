@@ -33,7 +33,7 @@ const ProfileDetails = ({ match }) =>{
       <div className={ styles.profileDetailsContainer }>
         <img src={avatar_url} alt={`Foto de ${ login }`}/>
         <strong>{login}</strong>
-        <p>
+        <p data-testid='profileDetails'>
           <b>Nome:</b> {nome} <br/>
           <b>Localização:</b> {!location ? "Não informado " : location} <br/>
           <b>Número de repositórios públicos:</b> {qt_repositorios} <br/>

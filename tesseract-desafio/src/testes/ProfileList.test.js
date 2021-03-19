@@ -2,7 +2,7 @@ import React from 'react';
 import { screen, fireEvent} from '@testing-library/react'
 import ProfileList from '../componentes/ProfileList';
 import '@testing-library/jest-dom/extend-expect';
-import data from './mockdata';
+import { data } from './mockdata';
 import renderWithRouter from './renderWithRouter';
 
 
@@ -25,7 +25,7 @@ describe('Teste do componente ProfileList', () => {
     expect(profileone).toBeInTheDocument();
   });
   it('Renderiza apenas os perfis de acordo com o filtro salvo no contexto ', async () => {
-    const filterByLogin = 'Acqua';;
+    const filterByLogin = 'Acqua';
     const providerProps = {
       data,
       filterByLogin,
