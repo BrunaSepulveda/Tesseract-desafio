@@ -8,9 +8,10 @@ const Filter = () => {
   return(
     <header className={ styles.filterContainer }>
       <input
+        data-testid='input-login'
         type="text"
         onChange={ (event) => handleInput(event) }
-        placeholder="Buscar por login"
+        placeholder="Buscar usuário por login"
       />
     </header>
   );
